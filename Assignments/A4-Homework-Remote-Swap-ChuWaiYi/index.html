@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Remote Swap</title>
+		<link rel="stylesheet" href="./css/styles.css">
+		<style>
+			.remote {
+				border: solid teal 10px;
+				width: 960px;
+				height: 320px;
+				margin: 25px auto;
+				background-color: white;
+			}
+
+			/*Thumbnails on the right or left*/
+			.remote .thumbs {
+				position:absolute;
+				left: 0 px;
+				top: 0 px;
+				width: 320 px;
+				height:320 px;
+
+				display:flex;
+				float:left;
+
+				/*display:inline;*/
+				/*float:left;*/
+				/*width: 320px;
+				margin:0;
+				border:0;*/
+				/*height: 320px;*/
+				/*right:406 px;*/
+			}
+			.thumbs.img{
+				width: 80 px;
+				height: 80 px;
+			}
+
+			/*Large opposite of the thumbnails (e.g. right or left)*/
+			.remote .large {
+				position:absolute;
+				right: 0 px;
+				top: 0 px;
+
+
+				float:right;
+
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Remote Swap</h1>
+
+		<div class="remote">
+			<div class="thumbs">
+				<img src="img/small/big_five_80.jpg">
+				<img src="img/small/birds_80.jpg">
+				<img src="img/small/bulls_80.jpg">
+				<img src="img/small/cheetah_80.jpg">
+					<div class="clear"></div>
+				<img src="img/small/desert_80.jpg">
+				<img src="img/small/elephant_80.jpg">
+				<img src="img/small/evening_80.jpg">
+				<img src="img/small/giraffes_80.jpg">
+				<div class="clear"></div>
+				<img src="img/small/green_80.jpg">
+				<img src="img/small/jump_80.jpg">
+				<img src="img/small/leopard_80.jpg">
+				<img src="img/small/lions_80.jpg">
+				<div class="clear"></div>
+				<img src="img/small/rhino_80.jpg">
+				<img src="img/small/safari_80.jpg">
+				<img src="img/small/tongue_80.jpg">
+				<img src="img/small/zebra_80.jpg">
+
+				<!-- Thumbnails Go Here -->
+			</div>
+			<div class="clear"></div>
+
+			<div class="large">
+				<img src="./img/large/big_five_640.jpg" class="enlarge" width="640px" height="320px">
+				<!-- Large Goes Here -->
+			</div>
+		</div>
+
+		<script>
+			// Your script goes here.
+			var thumbs = document.querySelectorAll('.thumbs img');
+			var large = document.querySelectorAll('.large img');
+
+			// querySlector ,without All only selct the first of the kind
+			// console.log('Thumbs', thumbs[0]);
+			console.log('Thumbnails', thumbs[0]);
+			console.log('Large', large[0]);
+
+
+				/*-------------------------------------
+				| image 1
+				-------------------------------------*/
+
+			thumbs[0].addEventListener('mouseover', function(){
+				console.log("hi")
+				large[0].src = './img/large/big_five_640.jpg'
+			});
+
+
+			/*-------------------------------------
+			| image 2
+			-------------------------------------*/
+
+			thumbs[1].addEventListener('mouseover', function(){
+				large[0].src = './img/large/birds_640.jpg'
+			});
+			/*-------------------------------------
+			| image 3
+			-------------------------------------*/
+
+			thumbs[2].addEventListener('mouseover', function(){
+				large[0].src = './img/large/bulls_640.jpg'
+			});
+			/*-------------------------------------
+			| image 4
+			-------------------------------------*/
+
+			thumbs[3].addEventListener('mouseover', function(){
+				large[0].src = './img/large/cheetah_640.jpg'
+			});
+			/*-------------------------------------
+			| image 5
+			-------------------------------------*/
+
+			thumbs[4].addEventListener('mouseover', function(){
+				large[0].src = './img/large/desert_640.jpg'
+			});
+			/*-------------------------------------
+			| image 6
+			-------------------------------------*/
+
+			thumbs[5].addEventListener('mouseover', function(){
+				large[0].src = './img/large/elephant_640.jpg'
+			});
+			/*-------------------------------------
+			| image 7
+			-------------------------------------*/
+
+			thumbs[6].addEventListener('mouseover', function(){
+				large[0].src = './img/large/evening_640.jpg'
+			});
+			/*-------------------------------------
+			| image 8
+			-------------------------------------*/
+
+			thumbs[7].addEventListener('mouseover', function(){
+				large[0].src = './img/large/giraffes_640.jpg'
+			});
+			/*-------------------------------------
+			| image 9
+			-------------------------------------*/
+
+			thumbs[8].addEventListener('mouseover', function(){
+				large[0].src = './img/large/green_640.jpg'
+			});
+			/*-------------------------------------
+			| image 10
+			-------------------------------------*/
+
+			thumbs[9].addEventListener('mouseover', function(){
+				large[0].src = './img/large/jump_640.jpg'
+			});
+			/*-------------------------------------
+			| image 11
+			-------------------------------------*/
+
+			thumbs[10].addEventListener('mouseover', function(){
+				large[0].src = './img/large/leopard_640.jpg'
+			});
+			/*-------------------------------------
+			| image 12
+			-------------------------------------*/
+
+			thumbs[11].addEventListener('mouseover', function(){
+				large[0].src = './img/large/lions_640.jpg'
+			});
+			/*-------------------------------------
+			| image 13
+			-------------------------------------*/
+
+			thumbs[12].addEventListener('mouseover', function(){
+				large[0].src = './img/large/rhino_640.jpg'
+			});
+			/*-------------------------------------
+			| image 14
+			-------------------------------------*/
+
+			thumbs[13].addEventListener('mouseover', function(){
+				large[0].src = './img/large/safari_640.jpg'
+			});
+			/*-------------------------------------
+			| image 15
+			-------------------------------------*/
+
+			thumbs[14].addEventListener('mouseover', function(){
+				large[0].src = './img/large/tongue_640.jpg'
+			});
+			/*-------------------------------------
+			| image 16
+			-------------------------------------*/
+
+			thumbs[15].addEventListener('mouseover', function(){
+				large[0].src = './img/large/zebra_640.jpg'
+			});
+
+
+
+
+
+
+
+
+
+
+
+
+		</script>
+	</body>
+</html>
