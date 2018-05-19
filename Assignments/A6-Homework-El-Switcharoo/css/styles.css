@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+body{
+  background-color:black;
+  color:white;
+
+}
+.frame{
+  width:960px;
+  height:600px;
+  margin: 25px auto;
+  background-color:white;
+  text-align: center;
+  /* display:abolute; */
+  /* display:flex; */
+  border-radius: 10px;
+}
+.set{
+  width:320px;
+  height:600px;
+  /* outline: solid red 1px; */
+  position:relative;
+
+}
+.set .flowBox{
+  /* width:100px; */
+  top:240px;
+  left:0px;
+  /* height:600px; */
+  /* border: solid 1px black; */
+  position:relative;
+  transition: all 1s;
+}
+.flowBox img{
+  position:absoliute;
+}
+.switchBox{
+  width:100px;
+  /* height:100px; */
+  border: solid green 1px ;
+  left:145px;
+  position:relative;
+  transition: all 1s;
+}
+.switchBox img{
+  width:100px;
+  position: absolute;
+  left:-36px;
+  top:400px;
+}
+.set.on .switchOff{
+  display:none;
+}
+.set .switchOff{
+  display:block;
+}
+.set.on .flowBox img{
+  position:absolute;
+  left:110px;
+  transition: all 1s;
+}
+.set.on .openLift{
+  display:block;
+}
+.set .openLift{
+  display:none;
+}
+.set.on .flowBox  {
+  top:0px;
+  /* height:150px; */
+  /* position:relative; */
+}
+
+h1{
+  text-align: center;
+  font-family: 'Berkshire Swash', cursive;
+}
+img{
+  /* position:relative; */
+}

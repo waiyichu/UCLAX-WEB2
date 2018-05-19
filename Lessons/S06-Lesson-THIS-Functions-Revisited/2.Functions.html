@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <title>Functions Revisited</title>
+        <style>
+            .cast {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .cast div {
+                width: 20%;
+            }
+            .cast img {
+                width: 100%;
+                display: block;
+                transition: all 1s;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>Functions Revisited</h1>
+        <div class="cast">
+            <div><img id="image1" src="./img/cast/out/marty.jpg"         data-filename="marty.jpg"></div>
+            <div><img id="image2" src="./img/cast/out/doc.jpg"           data-filename="doc.jpg"></div>
+            <div><img id="image3" src="./img/cast/out/george.jpg"        data-filename="george.jpg"></div>
+            <div><img id="image4" src="./img/cast/out/lorraine.jpg"      data-filename="lorraine.jpg"></div>
+            <div><img id="image5" src="./img/cast/out/biff.jpg"          data-filename="biff.jpg"></div>
+        </div>
+
+        <script>
+            /*-------------------------------------
+            | Grab Assets
+            -------------------------------------*/
+
+            var theCast = document.querySelectorAll('.cast img');
+            console.log(theCast);
+
+            /*-------------------------------------
+            | Function Declarations(no orders)(can call the fundtion before you define it)
+            -------------------------------------*/
+            function sayHello(firstName, lastName = 'McFly'){
+                //giving it a defualt value, so when undefined, it falls back to default value
+                console.log('Hello ' + firstName + ' ' + lastName);
+            }
+
+            // //function call
+            // sayHello('Marty', );
+            // //undefined last name, falls back to its default value
+            // sayHello('Doc', 'Brown');
+            // sayHello('George', 'McFly');
+            // sayHello('Lorraine', 'McFly');
+            // sayHello('Biff', 'Tannen');
+
+
+            /*-------------------------------------
+            | Arguments and Default Params :: Creating Flexible Functions
+            -------------------------------------*/
+            /* Whats in a Name? -------------------------------*/
+
+
+            /* Applied to images -------------------------------*/
+            //madeup names inside () function
+            function reduceOpacity(theImage, theOpacity){
+                console.log(theImage, theOpacity);
+                theImage.style.opacity = theOpacity;
+                // the set name of item + property of the item + property of the style
+            }
+            reduceOpacity(theCast[0], 1.0);
+            reduceOpacity(theCast[1], 0.7);
+            reduceOpacity(theCast[2], 0.5);
+            reduceOpacity(theCast[3], 0.3);
+            reduceOpacity(theCast[4], 0.1);
+
+
+            /*-------------------------------------
+            | Function Expressions works the same way but depends on how you assign it.
+            //always have to declare the function before you use it.
+            //define it before you used it
+            -------------------------------------*/
+            var needForSpeed = function(mph){
+                if(mph >= 88)
+                {
+                console.log('Time Travel Acheived');
+                }
+                else
+                {
+                    console.log("You need more speed. You're only going: " + mph);
+                }
+            }
+
+            needForSpeed(50);
+            needForSpeed(80);
+            needForSpeed(88);
+            needForSpeed(100);
+
+
+            /*-------------------------------------
+            | Passing Functions as Arguments
+            -------------------------------------*/
+
+
+            /*-------------------------------------
+            | Passing Functions as Arguments Practical Example
+            -------------------------------------*/
+
+
+            /*-------------------------------------
+            | The THIS keyword is self referential
+            -------------------------------------*/
+
+
+            /*-------------------------------------
+            | Passing Images as Arguments
+            -------------------------------------*/
+
+
+            /*-------------------------------------
+            | EcmaScript (ES),  ES5, ES6 and ES 2015 (different version of a language)
+            | ES1: June 1997 — ES2: June 1998 — ES3: Dec. 1999 — ES4: Abandoned
+            | ES5 :: December 2009
+            | ES6 / ES2015 - June 2015
+            | ES7 / ES2016 - June 2016
+            | ES8 / ES2017 - June 2017
+            | ES9 / ES2018 - June 2018
+            | ES.Next - latest release
+            | Compatibility and Transpilers to save the day(Babel)
+            -------------------------------------*/
+
+            /*-------------------------------------
+            | Fat Arrow Functions :: ES6 :: Like Function Expressions, Not Function Declarations
+            -------------------------------------*/
+            //benefit:how it helps on scoping
+            //removing the word function to "=>"
+            var myFatFunction = (arg1) => {
+                console.log(arg1);
+            }
+
+            //or
+
+            var myFatFunction = (arg1) => console.log(arg1);
+
+            myFatFunction('something');
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+
+    <title>A9-Homework-Show-and-hide</title>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+
+    <style>
+      body{
+        background-color: #323232;
+        font-family: 'Titillium Web', sans-serif;
+
+      }
+      .box{
+        background-color: #90d4d0;
+        padding: 20px;
+        width: 450px;
+        margin: auto;
+        margin-top: 150px;
+      }
+      h1{
+        color:#000000;
+      }
+      header{
+        background-color: #53f2e9;
+        padding:20px;
+      }
+      .movie-details{
+        padding:20px;
+        background-color: #16756f;
+        color: #ffffff;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>AMC Cinema</h1>
+
+      <header>
+        <h2>You have successfully purchased your movie ticket.</h2>
+        <button class="ticket">
+          <span>Show</span> Your Movie Booking Details
+        </button>
+      </header>
+      <div class="movie-details">
+        <p>
+          <span>Avengers: Infinity War</span>
+        </p>
+        <p>
+          <span>Date: Sunday 05-13-2018</span>
+        </p>
+        <p>
+          <span>Time: 1:30pm</span>
+        </p>
+      </div>
+
+
+    </div>
+    <script>
+      var button = document.querySelector('.box button.ticket');
+      var showHideText = document.querySelector('button.ticket span');
+      var movieDetails = document.querySelector('.box .movie-details');
+
+      console.log('button',button);
+      console.log('Show Hide Text', showHideText);
+      console.log('movie Details', movieDetails);
+
+      movieDetails.style.display = 'none';
+
+      button.addEventListener('click', function(){
+        if(movieDetails.style.display == 'none')
+        {
+          console.log('showup')
+          movieDetails.style.display = 'block';
+          showHideText.innerHTML = 'Hide';
+        }
+        else{
+          console.log('closeit');
+          movieDetails.style.display = 'none';
+          showHideText.innerHTML = 'Show';
+          console.log('closed yet?')
+
+        }
+      });
+
+
+    </script>
+
+  </body>
+</html>
